@@ -1,0 +1,76 @@
+* {
+	font-family: 'Lato', sans-serif;
+	margin: 0 !important;
+  }
+  
+  body {
+	  line-height: 1.28;
+	  background-color: #e6ecff;
+  }
+  
+  
+  .headings {
+	  color: white;
+  }
+  .navbar {
+	  background-color: black;
+  }
+  
+  
+  .row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	background-color: #503d3d;
+	color: wheat;
+  }
+  
+  .logowrapper {
+	  display: block;
+	  padding: 10px;
+	  color:whitesmoke;
+	}
+  .ele
+  {
+	padding: 10px;
+	margin: 10px;
+  }
+  .mybar{
+	margin:5px ;
+  }
+  
+  
+  .messages-window {
+	display: flex;
+	flex-direction: column;
+	
+	padding: 0.5em;
+	border-radius: 0.4em;
+	width: 60em;
+  }
+  .message-box {
+	position: bottom;
+	bottom: 15px;
+	width: 100%;
+  }
+  .message-form {
+	display: flex;
+	justify-content: space-between;
+  }
+  #form-input {
+	flex-grow: 10;
+  }
+  #form-input-submit {
+	flex-grow: 1;
+  }
+  
+  .chat-box {
+	margin:15px;
+	border: 4px double #503d3d;
+	border-radius: 2px;
+	height:34em;
+	width: 100%;
+  }
+  
+  
+  

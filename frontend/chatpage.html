@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ChatPage</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="chatpage.css">
+
 </head>
 <body>
+	<!-- NAVBAR -->
+	<div>
+        <nav class="navbar navbar-light">
+            <div class="headings"><h1 class="logowrapper">Discussion Forum</h1></div>
+        </nav>
+    </div>
+
+	<!-- CONTAINER -->
+	<div class="mybar">
+		<div class="row">
+			<div class="col2 ele">Initiator: John Doe</div>
+			<div class="col8  ele">Keywords: assignment, math, permutation, combination, help, needed</div>
+			<div id="activeU" class="col1 ele"> Active users: 1	</div> 
+				<div class="col1 ele">		
+					<a href="#" id="likedbtn" class="btn btn-primary">most liked </a>
+				</div>						
+				 
+		</div>
+				  <div class="row">
+				<div class="col ele desc text-break"> Description: Hey, i am a 8th grade student. I need help in completing my maths-assignment.</div></div>
+				</div>
+				<div class="chat-box">
+					<p style="text-align: center;" class="lead">This is a chat box!</p>
+				</div>
+
+
+
+	<!-- MESSAGE BOX -->
+	<div class="message-box">
+		<form class="message-form">
+			<div id="form-input" class="form-group mr-1">
+				<textarea placeholder="Type something..." class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+			</div>
+			<button id="form-input-submit" type="submit" class="btn btn-primary">
+				Send
+				<i class="fa fa-paper-plane" aria-hidden="true"></i>
+			</button>
+		</form>
+	</div>
+
     
 </body>
 </html>

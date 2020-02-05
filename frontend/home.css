@@ -1,0 +1,63 @@
+/* GLOBAL STYLES */
+* {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+}
+
+body {
+	background-color:whitesmoke;
+}
+
+/* SEARCHBAR */
+
+.headings {
+	color: white;
+}
+#searchbar {
+	width: 50%;
+	border-radius: 0.5em;
+	height: 2.5em;
+}
+.navbar {
+	background-color: black;
+}
+.form-inline {
+	display: flex;
+	justify-content: center;
+}
+
+
+/* CARDS SECTION */
+
+.cards-section {
+	margin-top: 10em;
+}
+.list {
+	border-bottom: 1px solid lightgray;
+}
+.card {
+	width: 12em;
+	height: 16em;
+	margin: 5px 10px;
+	padding: 5px;
+	border: 1px solid #d3daac;
+	border-radius: 2px;
+	box-shadow: 0.5px 0.5px 3px 1px rgb(11, 56, 0);
+	transition: transform 0.1s ease-in;
+}
+.card:hover {
+	cursor: pointer;
+	transform: translate(3px,3px);
+}
+.card-title {
+	font-size: 1rem;
+}
+.card-body {
+	padding: 0px;
+}
+.card-text {
+	margin: 0;
+}
+.hrline {
+	margin: 3px 0px;
+}
