@@ -15,34 +15,22 @@ body {
   background-color: black;
 }
 
+#profile-section1 {
+  border: 2px solid beige;
+  border-radius: 1em;
+}
+
 #profile-pic {
   width: 12em;
   height: 12em;
-  /* background-color: grey; */
   border-radius: 5em;
 }
-
-.detail-inputs-box {
-  display: flex;
-  justify-content: space-around;
-}
- 
-.detail-inputs {
-  flex-grow: 5;
-}
-.detail-buttons {
-  flex-grow: 1;
+.details {
+  height: 3em;
 }
 
 #profile-section2 {
   padding: 2em;
   background-color: bisque;
   border-radius: 10px;
-}
-
-#profile-section3 {
-  padding: 2em;
-  background-color: lightblue;
-  border-radius: 10px;
-  box-shadow: 1px 2px 1px 1px #111111;
 }
