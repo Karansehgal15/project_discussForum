@@ -13,13 +13,13 @@
 const sequelize = require('sequelize')
 const db = require('./database')
 
-const users = db.define('User', {
+const user = db.define('User', {
 	uid: {
 		type: sequelize.DataTypes.BIGINT,
 		primaryKey: true,
 		autoIncrement: true
 	},
-	
+
 	password:  {
 		type: sequelize.DataTypes.STRING,
 		unique: true,
@@ -63,7 +63,7 @@ const users = db.define('User', {
 db.sync().then(() => console.log("Database has been synced")).catch((err) => console.error("Error creating database"));
 
 module.exports = {
-	users
+	user
 	// entry,cards,auth
 }
 

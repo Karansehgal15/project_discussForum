@@ -8,6 +8,7 @@
 // Increasing te cost factor by 1 doubles the necessary time.
 // The more time is necessary, the more difficult is brute-forcing.
 const config = require('../../config')
+const bcrypt = require('bcrypt')
 const saltRounds = config.BCRYPT_SALT_ROUNDS;
 
 const pass2hash = function (pass) {

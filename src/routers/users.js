@@ -4,7 +4,7 @@ const express = require('express')
 	, Sequelize = require('sequelize');
 
 router.get('/', (req, res) => {
-	db.users.findAll()
+	db.user.findAll()
 	.then(users => {
 		console.log("users => ", users);
 		res.send(users);

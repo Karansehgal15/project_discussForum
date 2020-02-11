@@ -1,39 +1,48 @@
 db = require('../db/db');
 
 async function createUserLocal(query) {
-    let userLocal;
     try {
-        userLocal = await db.users.create({
+       	const userLocal = await db.user.create({
 			email: query.email,
 			password: query.password,
 			firstName:query.firstName,
-			lastName: query.lastName, dob: query.dob, 
+			lastName: query.lastName,
+			dob: query.dob,
 			gender: query.gender
 		})
+		return userLocal;
     } catch (err) {
 		console.log("error while creating user");
-        throw new Error('Unsuccessful registration. Please try again.')
+		return undefined;
 	}
-	console.log("user created!");
-    return userLocal;
 }
 
 async function findUserById(uid) {
-    return db.users.findOne({
-		where: { uid }
-	});
+	try {
+		const resp = await db.user.findOne({
+			where: { uid }
+		});
+		return resp;
+	}
+	catch(err) {
+		console.log("there is error in findUserById");
+		return undefined;
+	}
 }
 
 async function findUserByParams(params) {
 	try {
-		const resp = await db.users.findAll({
+		const resp = await db.user.findOne({
 			where:  {email: params.email}
 		})
+		console.log("user found!!!!!");
+		return resp;
 	}
 	catch(err) {
+		console.log("user not found!!!!!!");
 		console.log(err);
+		return undefined;
 	}
-	return resp;
 }
 
 
