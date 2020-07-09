@@ -14,7 +14,7 @@ body {
 .rows {
   display: flex;  flex-wrap: wrap;  color: wheat;
   justify-content:space-between;  background-color: #503d3d;
-  width:100vw; height:8vh ;
+  width:100vw; /*height:8vh ;*/
   }
 
 .ele
