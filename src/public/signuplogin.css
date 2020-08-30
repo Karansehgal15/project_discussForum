@@ -46,11 +46,21 @@ a {
   transition: all 0.3s ease;
 }
 
+.btn-ld {
+  background: transparent;
+  border-color: #252f44;
+  color: #252f44;
+  align-items: left;
+  justify-content: left;
+  font-size: 35px;
+}
+/*
 .btn-ld:hover{
   background-color: transparent;
   border-color: #ecf2ff;
   color: #252f44;
 }
+*/
 
 .btn-resetpass:hover {
   background-color: transparent;
@@ -127,7 +137,7 @@ input:not([type="checkbox"]) {
 .feature {
   padding-left: 30px;
   position: relative;
-  margin: 40px 0px;
+  margin: 0px 30px 40px 0px;
 }
 .feature i {
   color: #2762eb;
