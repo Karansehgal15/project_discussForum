@@ -48,19 +48,13 @@ a {
 
 .btn-ld {
   background: transparent;
-  border-color: #252f44;
+  border-color: white;
   color: #252f44;
   align-items: left;
   justify-content: left;
-  font-size: 35px;
+  font-size: 45px;
 }
-/*
-.btn-ld:hover{
-  background-color: transparent;
-  border-color: #ecf2ff;
-  color: #252f44;
-}
-*/
+
 
 .btn-resetpass:hover {
   background-color: transparent;

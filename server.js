@@ -7,6 +7,7 @@ const express = require('express')
 	, userRoutes = require('./src/routers/users')
 	, searchRoute = require('./src/routers/search')
 	, chatroomRoute = require('./src/routers/chatroom')
+	, passresetRoute = require('./src/routers/passreset')
 	, profileRoute = require('./src/routers/profile')
 	, infoRoute = require('./src/routers/aboutus')
 	, passport = require('passport')
@@ -49,6 +50,7 @@ global.__basedir = __dirname;
 app.use('/signup', signupRoute);
 app.use('/login',loginRoute);
 
+
 let usersockets = {};
 let cardLastMessage={};
 let activeUsers = {};
@@ -83,6 +85,7 @@ app.use(trendingCounter);
 
 
 // ROUTES ==============================================================
+app.use('/passreset',passresetRoute);
 app.use('/logout', logoutRoute);
 app.use('/profile', profileRoute);
 app.use('/users', userRoutes);
