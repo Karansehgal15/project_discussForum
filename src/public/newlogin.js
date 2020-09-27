@@ -1,16 +1,19 @@
-var button = document.querySelector(".img__btn");
-button.addEventListener("click", function() {document.querySelector(".cont").classList.toggle("s--signup"); });
 
 
+$(document).ready( function(){
 
-$(document).on("click", "#sndBtn", function() {
+$("#sndBtn").click(function(){
+      
     var emailInput = document.getElementById('emailInput');
-
+    console.log("post sent");
     $.post(
         '/passreset',
-        {   email:emailInput.value},
+        {   email:emailInput.value  },
         function(data){
-            fillData();
         }
     )
+  
+    location.href="/resetpassword.html";
+});
+
 });
