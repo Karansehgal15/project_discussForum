@@ -18,7 +18,7 @@ $(document).ready( function(e){
                 {   email:email, otp:otp, pass:pass  },
                 function(data){
                     var statusDiv=document.getElementById('statusDiv');
-                    if(data.status=="sucess"){
+                    if(data.status=="success"){
                         statusDiv.append(`password reset sucessful`);
                     }else{
                         statusDiv.append(`you have submitted incorect otp, please try again`);
