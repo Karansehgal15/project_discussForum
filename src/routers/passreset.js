@@ -1,10 +1,23 @@
 const express = require('express')
 	, router = express.Router()
-    , nodemailer=require('nodemailer')
+  , nodemailer=require('nodemailer')
+  , {createUserLocal, findUserByParams} = require('../controllers/user')
+	, {pass2hash} = require('../utils/passwordUtils')
 
 let otp={};
-router.post('/checkPass', (req, res) => {
-    res.send({status:"success"})
+router.post('/checkPass', async (req, res) => {
+   console.log(req.body.otp);
+   console.log(otp[req.body.email]);
+  if(req.body.otp==otp[req.body.email]){
+    const user = await findUserByParams({email: req.body.email});
+    const passhash = await pass2hash(req.body.pass);
+    user.update({password:passhash },{fields:['password']}).then(()=>{});
+    res.send({status:"success"});
+  }else{
+    res.send({status:"failed"});
+  }
+  
+ 
    
 })
 
@@ -28,7 +41,7 @@ var transporter = nodemailer.createTransport({
 
 router.post('/',  async(req,res)=>{
     try{
-       console.log("post recieved");
+    
        code="";
        for(let i=0;i<6;i++){
             code+=Math.floor(Math.random() * 10);
@@ -42,7 +55,7 @@ router.post('/',  async(req,res)=>{
           console.log('Email sent: ' + info.response);
         }
       });
-       console.log(req.body.email);
+      
     }
     catch(err)
     {
