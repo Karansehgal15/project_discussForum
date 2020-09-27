@@ -32,7 +32,7 @@ var transporter = nodemailer.createTransport({
   
   var mailOptions = {
     from: 'servicefromlivediscussion@gmail.com',
-    to: 'karansehgal151998@gmail.com',
+    to: '',
     subject: 'Password Reset Mail',
     text: ''
   };
@@ -48,6 +48,7 @@ router.post('/',  async(req,res)=>{
        }
        otp[req.body.email]=code;
        mailOptions.text="your authentication code is: "+code;
+       mailOptions.to=req.body.email;
        transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
